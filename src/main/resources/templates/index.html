@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+    <form method="POST" action="/contact" data-th-object="${contact}">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <input type="text" name="name" data-th-field="*{name}" required minlength="2" maxlength="32">
+                </td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td>
+                    <input type="email" name="email" data-th-field="*{email}" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone No.: </td>
+                <td>
+                    <input type="text" name="phone" data-th-field="*{phoneNum}" required>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <a href="/contacts">List of all contacts</a>
+    
+</body>
+</html>

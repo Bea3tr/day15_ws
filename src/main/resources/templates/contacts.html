@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<body>
+
+    <h3>List of IDs in Redis Database</h3>
+
+    <ol>
+        <li data-th-each="id: ${idList}">
+            <a data-th-href="@{/contact/{id}(id=${id})}"><span data-th-text="${id}"></span></a>
+        </li>
+    </ol>
+
+    <a href="/">Home</a>
+    
+</body>
+</html>
