@@ -8,7 +8,7 @@ public class Contact {
     private String name;
 
     @Size(min=7, message="Phone number has to be at least 7 digits")
-    @Pattern(regexp="\\d", message="Phone number should only contain digits")
+    @Pattern(regexp="\\d+", message="Phone number should only contain digits")
     private String phoneNum;
 
     @Email

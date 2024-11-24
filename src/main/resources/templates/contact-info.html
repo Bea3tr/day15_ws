@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Contact</title>
 </head>
 <body>
 
     <h3>Contact Information</h3>
-    <ul data-th-object="${contact}">
+    <ul data-th-object="${contact}" class="no-bullet">
         <li>Name: <span data-th-text="*{name}"></span></li>
         <li>Email: <span data-th-text="*{email}"></span></li>
         <li>Phone No.: <span data-th-text="*{phoneNum}"></span></li>
     </ul>
 
-    <a href="/contacts">Back</a>
+    <div>
+        <a href="/contacts">Back</a>
+    </div>
     
 </body>
 </html>

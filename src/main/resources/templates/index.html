@@ -3,38 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Home</title>
 </head>
 <body>
 
+    <h3>Contact Details Form</h3>
     <form method="POST" action="/contact" data-th-object="${contact}">
         <table>
             <tr>
                 <td>Name: </td>
                 <td>
                     <input type="text" name="name" data-th-field="*{name}" required minlength="2" maxlength="32">
+                    <div data-th-if="${#fields.hasErrors('name')}"
+                        data-th-errors="*{name}" data-th-errorclass="error">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>Email: </td>
                 <td>
                     <input type="email" name="email" data-th-field="*{email}" required>
+                    <div data-th-if="${#fields.hasErrors('email')}"
+                        data-th-errors="*{email}" data-th-errorclass="error">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>Phone No.: </td>
                 <td>
                     <input type="text" name="phone" data-th-field="*{phoneNum}" required>
+                    <div data-th-if="${#fields.hasErrors('phoneNum')}"
+                        data-th-errors="*{phoneNum}" data-th-errorclass="error">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td></td>
-                <td>
+                <td class="submit-button">
                     <button type="submit">Submit</button>
                 </td>
             </tr>
         </table>
     </form>
+
+    <br>
 
     <a href="/contacts">List of all contacts</a>
     
